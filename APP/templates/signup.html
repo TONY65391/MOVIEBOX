@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="APP/static/forms.css">
+    <title>Signup - MovieBox</title>
+</head>
+<body class="signup">
+    
+    <header>
+        <div>
+            <h1>MovieBox</h1>
+        </div>
+
+        <nav>
+            <div></div>
+            <div></div>
+            <div></div>
+        </nav>
+
+        <div class="links">
+            <a class="active">
+
+                Signup
+            </a>
+
+            <a href="login">
+
+                Login
+            </a>
+        </div>
+
+        
+    </header>
+
+    <div class="container">
+        <div class="sub">
+            <form action="formhandler" method="post" enctype="multipart/form-data">
+                <h1>Login - MovieBox</h1>
+                {% csrf_token %}
+                {{ signupform }}
+                <p>Already have an account? <a href="login">Login</a></p>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src="/static/app.js" defer></script>
+</html>
