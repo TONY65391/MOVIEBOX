@@ -9,7 +9,7 @@
     transition: all 0.3s ease;
 }
 body[class="signup"]{
-    background-image: url(./movies/signup.jpg), linear-gradient(to right, rgba(0, 0, 0, 0.8));
+    background: url(/static/movies/signup.jpg), linear-gradient(to right, rgba(0, 0, 0, 0.8));
     background-blend-mode: multiply;
     color: white;
 }
@@ -46,7 +46,7 @@ header div .active{
 header nav{
     width: 40px;
     height: 40px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -100,6 +100,9 @@ header nav.open div:last-child{
 @media screen and (max-width: 768px) {
     header{
         justify-content: space-around;
+    }
+    header nav{
+        display: flex;
     }
     header .links{
         display: block;
