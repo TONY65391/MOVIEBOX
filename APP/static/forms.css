@@ -10,8 +10,9 @@
 }
 body[class="signup"]{
     /* background: url(https://pin.it/3iRcTyGV3), linear-gradient(to right, rgba(0, 0, 0, 0.8)); */
-    background: url(https://images.pexels.com/photos/33452677/pexels-photo-33452677.jpeg);
+    background: url(https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg), linear-gradient(to right, rgba(0, 0, 0, 0.5));
     background-blend-mode: multiply;
+    background-size: cover;
     color: white;
 }
 header{
