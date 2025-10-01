@@ -9,7 +9,8 @@
     transition: all 0.3s ease;
 }
 body[class="signup"]{
-    background: url(/static/movies/signup.jpg), linear-gradient(to right, rgba(0, 0, 0, 0.8));
+    background: url(https://pin.it/3iRcTyGV3), linear-gradient(to right, rgba(0, 0, 0, 0.8));
+    background: url(https://images.pexels.com/photos/29214035/pexels-photo-29214035.jpeg);
     background-blend-mode: multiply;
     color: white;
 }
