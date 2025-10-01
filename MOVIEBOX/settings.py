@@ -119,7 +119,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = 'APP/static/'
+# STATIC_ROOT = 'APP/static/'
 
 MEDIA_URL = ''
 

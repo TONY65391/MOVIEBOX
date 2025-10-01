@@ -29,11 +29,11 @@ header{
 header h1{
     font-variant: small-caps;
 }
-header div{
+header .links{
     display: flex;
     gap: 20px;
 }
-header div a{
+header .links a{
     color: white;
     text-decoration: none;
     font-variant: small-caps;
@@ -41,8 +41,8 @@ header div a{
     padding: 10px 30px;
     border-radius: 5px;
 }
-header div a:hover,
-header div .active{
+header .links a:hover,
+header .links .active{
     background: rgb(6, 70, 6);
 }
 header nav{
@@ -92,16 +92,49 @@ header nav.open div:last-child{
 }
 @keyframes openLink{
     from{height: 0px;}
-    to{height: 90px;}
+    to{height: 100px;}
 }
 @keyframes closeLink{
-    from{height: 90px;}
+    from{height: 100px;}
     to{height: 0px;}
+}
+
+
+form{
+    margin-top: 20px;
+}
+form div{
+    margin: 10px 0;
+}
+form div input{
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 0 5px 10px;
+    outline: 2px solid transparent;
+    background: white;
+    border: none;
+    color: black;
+}
+form div input:focus,
+form div input:hover{
+    outline-color: rgb(6, 70, 6);
+    outline-color: blue;
+}
+form button{
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+}
+form a{
+    color: rgb(6, 70, 6);
 }
 
 @media screen and (max-width: 768px) {
     header{
         justify-content: space-around;
+        z-index: 2;
     }
     header nav{
         display: flex;
@@ -120,8 +153,10 @@ header nav.open div:last-child{
         animation: openLink 0.4s linear forwards;
     }
     header .links a{
+        background: rgba(0, 0, 0, 0.9);
         display: block;
         border-radius: 0px;
         text-align: center;
+        margin: 5px 0;
     }
 }
