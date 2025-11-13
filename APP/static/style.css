@@ -120,7 +120,6 @@ header nav:hover div:first-child,
 header nav:hover div:nth-child(2),
 header nav:hover div:last-child{
   width: 30px;
-  background: var(--Midnight-Blue);
 }
 header nav div{
   width: 0px;
@@ -150,7 +149,35 @@ header nav.open div:last-child{
   transform: translateY(-10px) rotate(-40deg);
   width: 30px;
 }
-
+header .sub-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 30;
+  width: 100%;
+  display: block;
+  padding: 0px 10px;
+  background: rgba(0,0,0,0.5);
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 1.5s ease;
+}
+header .sub-menu a{
+  border: none;
+  border-bottom: 1px solid var(--Dusty-Rose);
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  text-align: center;
+}
+header .sub-menu a:hover{
+  border: none;
+  border-bottom: 1px solid var(--Dusty-Rose);
+  background: var(--Dusty-Rose);
+}
+header .sub-menu.open{
+  max-height: 400px;
+}
 
 
 .hero{
@@ -192,7 +219,7 @@ header nav.open div:last-child{
   align-items: center;
   gap: 10px;
 }
-.hero .content .cta button{
+.hero .content .cta a{
   background: none;
   padding: 10px 30px;
   border: 1px solid;
@@ -201,14 +228,14 @@ header nav.open div:last-child{
   border-radius: 5px;
 }
 
-.hero .content .cta button:first-child,
-.hero .content .cta button:last-child:hover{
+.hero .content .cta a:first-child,
+.hero .content .cta a:last-child:hover{
   background: var(--Dusty-Rose);
   color: var(--Midnight-Blue);
   border-color: var(--Dusty-Rose);
 }
-.hero .content .cta button:last-child,
-.hero .content .cta button:first-child:hover{
+.hero .content .cta a:last-child,
+.hero .content .cta a:first-child:hover{
   background: var(--Midnight-Blue);
   color: var(--Dusty-Rose);
   border-color: var(--Midnight-Blue);
@@ -229,5 +256,8 @@ header nav.open div:last-child{
   .hero .content .cta{
     width: fit-content;
     margin: auto;
+  }
+  .hero .content .cta a{
+    padding: 10px 20px;
   }
 }
